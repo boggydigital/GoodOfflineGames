@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using Attributes;
 using Delegates.Data.Storage;
-using Interfaces.Delegates.Convert;
+using GOG.Delegates.Conversions.JSON.ProductTypes;
 using Interfaces.Delegates.Data;
 using GOG.Models;
-using Delegates.Data.Storage;
+using Interfaces.Delegates.Conversions;
 
 namespace GOG.Delegates.Data.Storage.ProductTypes
 {
@@ -12,7 +12,7 @@ namespace GOG.Delegates.Data.Storage.ProductTypes
     {
         [Dependencies(
             typeof(GetStringDataAsyncDelegate),
-            typeof(GOG.Delegates.Convert.JSON.ProductTypes.ConvertJSONToListAccountProductDelegate))]
+            typeof(ConvertJSONToListAccountProductDelegate))]
         public GetListAccountProductDataAsyncDelegate(
             IGetDataAsyncDelegate<string,string> getStringDataAsyncDelegate,
             IConvertDelegate<string, List<AccountProduct>> convertJSONToListAccountProductDelegate) :

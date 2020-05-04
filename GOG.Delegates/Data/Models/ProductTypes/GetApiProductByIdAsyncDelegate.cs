@@ -2,9 +2,11 @@ using System.Collections.Generic;
 using Delegates.Data.Models;
 using GOG.Models;
 using Interfaces.Delegates.Collections;
-using Interfaces.Delegates.Convert;
 using Interfaces.Delegates.Data;
 using Attributes;
+using GOG.Delegates.Collections.ProductTypes;
+using GOG.Delegates.Conversions.ProductTypes;
+using Interfaces.Delegates.Conversions;
 
 namespace GOG.Delegates.Data.Models.ProductTypes
 {
@@ -12,8 +14,8 @@ namespace GOG.Delegates.Data.Models.ProductTypes
     {
         [Dependencies(
             typeof(GOG.Delegates.Data.Storage.ProductTypes.GetListApiProductDataFromPathAsyncDelegate),
-            typeof(GOG.Delegates.Collections.ProductTypes.FindApiProductDelegate),
-            typeof(GOG.Delegates.Convert.ProductTypes.ConvertApiProductToIndexDelegate))]
+            typeof(FindApiProductDelegate),
+            typeof(ConvertApiProductToIndexDelegate))]
         public GetApiProductByIdAsyncDelegate(
             IGetDataAsyncDelegate<List<ApiProduct>, string> getListApiProductsAsyncDelegate, 
             IFindDelegate<ApiProduct> findDelegate, 

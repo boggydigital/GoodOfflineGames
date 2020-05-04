@@ -1,18 +1,19 @@
 using System.Collections.Generic;
 using Attributes;
+using Delegates.Values.Paths.ProductTypes;
 using Interfaces.Delegates.Data;
-using Interfaces.Delegates.GetPath;
+using Interfaces.Delegates.Values;
 
 namespace Delegates.Data.Storage.ProductTypes
 {
     public class PostListWishlistedDataToPathAsyncDelegate : PostJSONDataToPathAsyncDelegate<List<long>>
     {
         [Dependencies(
-            typeof(Delegates.Data.Storage.ProductTypes.PostListWishlistedDataAsyncDelegate),
-            typeof(Delegates.GetPath.ProductTypes.GetWishlistedPathDelegate))]
+            typeof(PostListWishlistedDataAsyncDelegate),
+            typeof(GetWishlistedPathDelegate))]
         public PostListWishlistedDataToPathAsyncDelegate(
             IPostDataAsyncDelegate<List<long>> postListWishlistedDataAsyncDelegate,
-            IGetPathDelegate getWishlistedPathDelegate) :
+            IGetValueDelegate<string,(string Directory,string Filename)> getWishlistedPathDelegate) :
             base(
                 postListWishlistedDataAsyncDelegate,
                 getWishlistedPathDelegate)

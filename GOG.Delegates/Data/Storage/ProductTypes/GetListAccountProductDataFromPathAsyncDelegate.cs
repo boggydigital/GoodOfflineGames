@@ -1,21 +1,21 @@
 using System.Collections.Generic;
 using Attributes;
 using Delegates.Data.Storage;
+using Delegates.Values.Paths.ProductTypes;
 using Interfaces.Delegates.Data;
-using Interfaces.Delegates.GetPath;
+using Interfaces.Delegates.Values;
 using GOG.Models;
-using Delegates.GetPath.ProductTypes;
 
 namespace GOG.Delegates.Data.Storage.ProductTypes
 {
     public class GetListAccountProductDataFromPathAsyncDelegate : GetJSONDataFromPathAsyncDelegate<List<AccountProduct>>
     {
         [Dependencies(
-            typeof(GOG.Delegates.Data.Storage.ProductTypes.GetListAccountProductDataAsyncDelegate),
+            typeof(GetListAccountProductDataAsyncDelegate),
             typeof(GetAccountProductsPathDelegate))]
         public GetListAccountProductDataFromPathAsyncDelegate(
             IGetDataAsyncDelegate<List<AccountProduct>,string> getListAccountProductDataAsyncDelegate,
-            IGetPathDelegate getAccountProductsPathDelegate) :
+            IGetValueDelegate<string,(string Directory,string Filename)> getAccountProductsPathDelegate) :
             base(
                 getListAccountProductDataAsyncDelegate,
                 getAccountProductsPathDelegate)

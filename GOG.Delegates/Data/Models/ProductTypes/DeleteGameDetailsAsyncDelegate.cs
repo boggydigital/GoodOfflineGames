@@ -1,10 +1,12 @@
 using System.Collections.Generic;
 using Delegates.Data.Models;
 using GOG.Models;
-using Interfaces.Delegates.Confirm;
-using Interfaces.Delegates.Convert;
 using Interfaces.Delegates.Data;
 using Attributes;
+using GOG.Delegates.Confirmations.ProductTypes;
+using GOG.Delegates.Conversions.ProductTypes;
+using Interfaces.Delegates.Confirmations;
+using Interfaces.Delegates.Conversions;
 
 namespace GOG.Delegates.Data.Models.ProductTypes
 {
@@ -12,8 +14,8 @@ namespace GOG.Delegates.Data.Models.ProductTypes
     {
         [Dependencies(
             typeof(GOG.Delegates.Data.Storage.ProductTypes.GetListGameDetailsDataFromPathAsyncDelegate),
-            typeof(GOG.Delegates.Convert.ProductTypes.ConvertGameDetailsToIndexDelegate),
-            typeof(GOG.Delegates.Confirm.ProductTypes.ConfirmGameDetailsContainIdAsyncDelegate))]
+            typeof(ConvertGameDetailsToIndexDelegate),
+            typeof(ConfirmGameDetailsContainIdAsyncDelegate))]
         public DeleteGameDetailsAsyncDelegate(
             IGetDataAsyncDelegate<List<GameDetails>, string> getDataCollectionAsyncDelegate, 
             IConvertDelegate<GameDetails, long> convertProductToIndexDelegate, 

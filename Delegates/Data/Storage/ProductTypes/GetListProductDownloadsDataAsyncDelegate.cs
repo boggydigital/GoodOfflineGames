@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Attributes;
-using Interfaces.Delegates.Convert;
+using Delegates.Conversions.JSON.ProductTypes;
+using Interfaces.Delegates.Conversions;
 using Interfaces.Delegates.Data;
 using Models.ProductTypes;
 
@@ -9,8 +10,8 @@ namespace Delegates.Data.Storage.ProductTypes
     public class GetListProductDownloadsDataAsyncDelegate : GetJSONDataAsyncDelegate<List<ProductDownloads>>
     {
         [Dependencies(
-            typeof(Delegates.Data.Storage.GetStringDataAsyncDelegate),
-            typeof(Delegates.Convert.JSON.ProductTypes.ConvertJSONToListProductDownloadsDelegate))]
+            typeof(GetStringDataAsyncDelegate),
+            typeof(ConvertJSONToListProductDownloadsDelegate))]
         public GetListProductDownloadsDataAsyncDelegate(
             IGetDataAsyncDelegate<string, string> getStringDataAsyncDelegate,
             IConvertDelegate<string, List<ProductDownloads>> convertJSONToListProductDownloadsDelegate) :

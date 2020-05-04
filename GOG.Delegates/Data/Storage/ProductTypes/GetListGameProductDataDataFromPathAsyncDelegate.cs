@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using Attributes;
 using Delegates.Data.Storage;
+using Delegates.Values.Paths.ProductTypes;
 using Interfaces.Delegates.Data;
-using Interfaces.Delegates.GetPath;
+using Interfaces.Delegates.Values;
 using GOG.Models;
-using Delegates.GetPath.ProductTypes;
 
 namespace GOG.Delegates.Data.Storage.ProductTypes
 {
@@ -12,11 +12,11 @@ namespace GOG.Delegates.Data.Storage.ProductTypes
         GetListGameProductDataDataFromPathAsyncDelegate : GetJSONDataFromPathAsyncDelegate<List<GameProductData>>
     {
         [Dependencies(
-            typeof(GOG.Delegates.Data.Storage.ProductTypes.GetListGameProductDataDataAsyncDelegate),
+            typeof(GetListGameProductDataDataAsyncDelegate),
             typeof(GetGameProductDataPathDelegate))]
         public GetListGameProductDataDataFromPathAsyncDelegate(
             IGetDataAsyncDelegate<List<GameProductData>,string> getListGameProductDataDataAsyncDelegate,
-            IGetPathDelegate getGameProductDataPathDelegate) :
+            IGetValueDelegate<string,(string Directory,string Filename)> getGameProductDataPathDelegate) :
             base(
                 getListGameProductDataDataAsyncDelegate,
                 getGameProductDataPathDelegate)

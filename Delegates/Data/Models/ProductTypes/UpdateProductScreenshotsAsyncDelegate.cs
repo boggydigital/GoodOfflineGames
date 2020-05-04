@@ -1,18 +1,20 @@
 using System.Collections.Generic;
-using Interfaces.Delegates.Confirm;
-using Interfaces.Delegates.Convert;
 using Interfaces.Delegates.Data;
 using Models.ProductTypes;
 using Attributes;
+using Delegates.Confirmations.ProductTypes;
+using Delegates.Conversions.ProductTypes;
+using Interfaces.Delegates.Confirmations;
+using Interfaces.Delegates.Conversions;
 
 namespace Delegates.Data.Models.ProductTypes
 {
     public class UpdateProductScreenshotsAsyncDelegate: UpdateDataAsyncDelegate<ProductScreenshots>
     {
         [Dependencies(
-            typeof(Delegates.Data.Models.ProductTypes.DeleteProductScreenshotsAsyncDelegate),
-            typeof(Delegates.Convert.ProductTypes.ConvertProductScreenshotsToIndexDelegate),
-            typeof(Delegates.Confirm.ProductTypes.ConfirmProductScreenshotsContainIdAsyncDelegate),
+            typeof(DeleteProductScreenshotsAsyncDelegate),
+            typeof(ConvertProductScreenshotsToIndexDelegate),
+            typeof(ConfirmProductScreenshotsContainIdAsyncDelegate),
             typeof(Delegates.Data.Storage.ProductTypes.GetListProductScreenshotsDataFromPathAsyncDelegate))]
         public UpdateProductScreenshotsAsyncDelegate(
             IDeleteAsyncDelegate<ProductScreenshots> deleteAsyncDelegate, 

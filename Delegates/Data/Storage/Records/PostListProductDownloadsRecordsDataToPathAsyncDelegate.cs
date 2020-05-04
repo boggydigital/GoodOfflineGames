@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using Attributes;
+using Delegates.Values.Paths.Records;
 using Interfaces.Delegates.Data;
-using Interfaces.Delegates.GetPath;
+using Interfaces.Delegates.Values;
 using Models.ProductTypes;
 
 namespace Delegates.Data.Storage.Records
@@ -10,11 +11,11 @@ namespace Delegates.Data.Storage.Records
         PostListProductDownloadsRecordsDataToPathAsyncDelegate : PostJSONDataToPathAsyncDelegate<List<ProductRecords>>
     {
         [Dependencies(
-            typeof(Delegates.Data.Storage.Records.PostListProductRecordsDataAsyncDelegate),
-            typeof(Delegates.GetPath.Records.GetProductDownloadsRecordsPathDelegate))]
+            typeof(PostListProductRecordsDataAsyncDelegate),
+            typeof(GetProductDownloadsRecordsPathDelegate))]
         public PostListProductDownloadsRecordsDataToPathAsyncDelegate(
             IPostDataAsyncDelegate<List<ProductRecords>> postListProductRecordsDataAsyncDelegate,
-            IGetPathDelegate getProductDownloadsRecordsPathDelegate) :
+            IGetValueDelegate<string,(string Directory,string Filename)> getProductDownloadsRecordsPathDelegate) :
             base(
                 postListProductRecordsDataAsyncDelegate,
                 getProductDownloadsRecordsPathDelegate)

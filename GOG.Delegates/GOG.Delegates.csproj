@@ -12,8 +12,4 @@
     <ProjectReference Include="..\Attributes\Attributes.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Data\Models" />
-  </ItemGroup>
-
 </Project>

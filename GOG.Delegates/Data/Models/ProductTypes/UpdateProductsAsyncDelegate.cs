@@ -1,19 +1,21 @@
 using System.Collections.Generic;
 using Delegates.Data.Models;
 using GOG.Models;
-using Interfaces.Delegates.Confirm;
-using Interfaces.Delegates.Convert;
 using Interfaces.Delegates.Data;
 using Attributes;
+using GOG.Delegates.Confirmations.ProductTypes;
+using GOG.Delegates.Conversions.ProductTypes;
+using Interfaces.Delegates.Confirmations;
+using Interfaces.Delegates.Conversions;
 
 namespace GOG.Delegates.Data.Models.ProductTypes
 {
     public class UpdateProductsAsyncDelegate: UpdateDataAsyncDelegate<Product>
     {
         [Dependencies(
-            typeof(GOG.Delegates.Data.Models.ProductTypes.DeleteProductsAsyncDelegate),
-            typeof(GOG.Delegates.Convert.ProductTypes.ConvertProductToIndexDelegate),
-            typeof(GOG.Delegates.Confirm.ProductTypes.ConfirmProductsContainIdAsyncDelegate),
+            typeof(DeleteProductsAsyncDelegate),
+            typeof(ConvertProductToIndexDelegate),
+            typeof(ConfirmProductsContainIdAsyncDelegate),
             typeof(GOG.Delegates.Data.Storage.ProductTypes.GetListProductDataFromPathAsyncDelegate))]
         public UpdateProductsAsyncDelegate(
             IDeleteAsyncDelegate<Product> deleteProductsAsyncDelegate, 

@@ -1,18 +1,20 @@
 using System.Collections.Generic;
-using Interfaces.Delegates.Confirm;
-using Interfaces.Delegates.Convert;
 using Interfaces.Delegates.Data;
 using Models.ProductTypes;
 using Attributes;
+using Delegates.Confirmations.ProductTypes;
+using Delegates.Conversions.ProductTypes;
+using Interfaces.Delegates.Confirmations;
+using Interfaces.Delegates.Conversions;
 
 namespace Delegates.Data.Models.ProductTypes
 {
     public class UpdateProductRoutesAsyncDelegate: UpdateDataAsyncDelegate<ProductRoutes>
     {
         [Dependencies(
-            typeof(Delegates.Data.Models.ProductTypes.DeleteProductRoutesAsyncDelegate),
-            typeof(Delegates.Convert.ProductTypes.ConvertProductRoutesToIndexDelegate),
-            typeof(Delegates.Confirm.ProductTypes.ConfirmProductRoutesContainIdAsyncDelegate),
+            typeof(DeleteProductRoutesAsyncDelegate),
+            typeof(ConvertProductRoutesToIndexDelegate),
+            typeof(ConfirmProductRoutesContainIdAsyncDelegate),
             typeof(Delegates.Data.Storage.ProductTypes.GetListProductRoutesDataFromPathAsyncDelegate))]
         public UpdateProductRoutesAsyncDelegate(
             IDeleteAsyncDelegate<ProductRoutes> deleteAsyncDelegate, 

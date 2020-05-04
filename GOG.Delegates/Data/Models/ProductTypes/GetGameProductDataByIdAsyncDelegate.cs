@@ -2,9 +2,11 @@ using System.Collections.Generic;
 using Delegates.Data.Models;
 using GOG.Models;
 using Interfaces.Delegates.Collections;
-using Interfaces.Delegates.Convert;
 using Interfaces.Delegates.Data;
 using Attributes;
+using GOG.Delegates.Collections.ProductTypes;
+using GOG.Delegates.Conversions.ProductTypes;
+using Interfaces.Delegates.Conversions;
 
 namespace GOG.Delegates.Data.Models.ProductTypes
 {
@@ -12,8 +14,8 @@ namespace GOG.Delegates.Data.Models.ProductTypes
     {
         [Dependencies(
             typeof(GOG.Delegates.Data.Storage.ProductTypes.GetListGameProductDataDataFromPathAsyncDelegate),
-            typeof(GOG.Delegates.Collections.ProductTypes.FindGameProductDataDelegate),
-            typeof(GOG.Delegates.Convert.ProductTypes.ConvertGameProductDataToIndexDelegate))]
+            typeof(FindGameProductDataDelegate),
+            typeof(ConvertGameProductDataToIndexDelegate))]
         public GetGameProductDataByIdAsyncDelegate(
             IGetDataAsyncDelegate<List<GameProductData>, string> getListGameProductDataAsyncDelegate, 
             IFindDelegate<GameProductData> findDelegate, 

@@ -1,27 +1,27 @@
 using System;
 using System.Collections.Generic;
 using Attributes;
+using Delegates.Values.Activities;
 using Interfaces.Delegates.Activities;
-using Interfaces.Delegates.GetValue;
+using Interfaces.Delegates.Values;
 using Interfaces.Models.Activities;
-using Delegates.GetValue.Activities;
 
 namespace Delegates.Activities
 {
     public class SetProgressDelegate : ISetProgressDelegate
     {
-        private readonly IGetValueDelegate<Stack<IActivity>> getOngoingActivitiesValueDelegate;
+        private readonly IGetInstanceDelegate<Stack<IActivity>> getOngoingActivitiesInstanceDelegate;
 
         [Dependencies(
-            typeof(GetOngoingActivitiesValueDelegate))]
-        public SetProgressDelegate(IGetValueDelegate<Stack<IActivity>> getOngoingActivitiesValueDelegate)
+            typeof(GetOngoingActivitiesInstanceDelegate))]
+        public SetProgressDelegate(IGetInstanceDelegate<Stack<IActivity>> getOngoingActivitiesInstanceDelegate)
         {
-            this.getOngoingActivitiesValueDelegate = getOngoingActivitiesValueDelegate;
+            this.getOngoingActivitiesInstanceDelegate = getOngoingActivitiesInstanceDelegate;
         }
 
         public void SetProgress(int increment = 1, int target = int.MaxValue)
         {
-            var ongoingActivities = getOngoingActivitiesValueDelegate.GetValue();
+            var ongoingActivities = getOngoingActivitiesInstanceDelegate.GetInstance();
             var currentActivity = ongoingActivities.Peek();
             if (target != int.MaxValue)
                 currentActivity.Target = target;
