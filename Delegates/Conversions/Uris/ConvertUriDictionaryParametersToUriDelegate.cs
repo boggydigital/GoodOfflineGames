@@ -23,9 +23,7 @@ namespace Delegates.Conversions.Uris
         {
             if (uriParameters.Parameters == null) return uriParameters.Uri;
 
-            return $@"{uriParameters.Uri}
-                    {Separators.QueryString}
-                    {convertDictionaryParametersToStringDelegate.Convert(uriParameters.Parameters)}";
+            return $@"{uriParameters.Uri}{Separators.QueryString}{convertDictionaryParametersToStringDelegate.Convert(uriParameters.Parameters)}";
         }
     }
 }

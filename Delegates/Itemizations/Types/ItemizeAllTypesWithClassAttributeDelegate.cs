@@ -1,25 +1,25 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Interfaces.Delegates.Itemizations;
 
 namespace Delegates.Itemizations.Types
 {
     public abstract class ItemizeAllTypesWithClassAttributeDelegate<AttributeType> : IItemizeAllDelegate<Type>
     {
-        private readonly IItemizeAllDelegate<Type> itemizeAllAppDomainTypesDelegate;
+        private readonly IItemizeAllDelegate<Type> itemizeAllTypesDelegate;
 
         public ItemizeAllTypesWithClassAttributeDelegate(
-            IItemizeAllDelegate<Type> itemizeAllAppDomainTypesDelegate)
+            IItemizeAllDelegate<Type> itemizeAllTypesDelegate)
         {
-            this.itemizeAllAppDomainTypesDelegate = itemizeAllAppDomainTypesDelegate;
+            this.itemizeAllTypesDelegate = itemizeAllTypesDelegate;
         }
 
         public IEnumerable<Type> ItemizeAll()
         {
-            var types = itemizeAllAppDomainTypesDelegate.ItemizeAll();
-            foreach (var type in types)
-                if (type.IsDefined(typeof(AttributeType), false))
-                    yield return type;
+            return itemizeAllTypesDelegate.ItemizeAll().Where(
+                type =>
+                    type.IsDefined(typeof(AttributeType), false));
         }
     }
 }

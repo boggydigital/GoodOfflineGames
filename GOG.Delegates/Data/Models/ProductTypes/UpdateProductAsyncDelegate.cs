@@ -10,14 +10,14 @@ using Interfaces.Delegates.Conversions;
 
 namespace GOG.Delegates.Data.Models.ProductTypes
 {
-    public class UpdateProductsAsyncDelegate: UpdateDataAsyncDelegate<Product>
+    public class UpdateProductAsyncDelegate: UpdateDataAsyncDelegate<Product>
     {
         [Dependencies(
             typeof(DeleteProductsAsyncDelegate),
             typeof(ConvertProductToIndexDelegate),
             typeof(ConfirmProductsContainIdAsyncDelegate),
-            typeof(GOG.Delegates.Data.Storage.ProductTypes.GetListProductDataFromPathAsyncDelegate))]
-        public UpdateProductsAsyncDelegate(
+            typeof(GOG.Delegates.Data.Storage.ProductTypes.GetStoredListProductDataAsyncDelegate))]
+        public UpdateProductAsyncDelegate(
             IDeleteAsyncDelegate<Product> deleteProductsAsyncDelegate, 
             IConvertDelegate<Product, long> convertProductToIndexDelegate, 
             IConfirmAsyncDelegate<long> confirmProductsContainsIdAsyncDelegate, 

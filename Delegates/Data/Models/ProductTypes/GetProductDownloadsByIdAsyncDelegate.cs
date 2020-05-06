@@ -12,7 +12,7 @@ namespace Delegates.Data.Models.ProductTypes
         GetDataByIdAsyncDelegate<ProductDownloads>
     {
         [Dependencies(
-            typeof(Delegates.Data.Storage.ProductTypes.GetListProductDownloadsDataFromPathAsyncDelegate),
+            typeof(Delegates.Data.Storage.ProductTypes.GetStoredListProductDownloadsDataAsyncDelegate),
             typeof(Delegates.Collections.ProductTypes.FindProductDownloadsDelegate),
             typeof(ConvertProductDownloadsToIndexDelegate))]
         public GetProductDownloadsByIdAsyncDelegate(

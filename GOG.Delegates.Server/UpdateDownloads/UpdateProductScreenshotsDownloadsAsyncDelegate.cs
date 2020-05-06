@@ -14,7 +14,7 @@ using Models.ProductTypes;
 namespace GOG.Delegates.Server.UpdateDownloads
 {
     // TODO: productscreenshots or just screenshots?
-    [RespondsToRequests(Method = "updatedownloads", Collection = "productscreenshots")]
+    [ApiEndpoint(Method = "updatedownloads", Collection = "productscreenshots")]
     public class UpdateProductScreenshotsDownloadsAsyncDelegate :
         UpdateDownloadsAsyncDelegate<ProductScreenshots>
     {

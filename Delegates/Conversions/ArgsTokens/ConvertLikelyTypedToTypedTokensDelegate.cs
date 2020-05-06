@@ -21,7 +21,7 @@ namespace Delegates.Conversions.ArgsTokens
         private IFindDelegate<Parameter> findParameterDelegate;
 
         [Dependencies(
-            typeof(Data.Storage.ArgsDefinitions.GetArgsDefinitionsDataFromPathAsyncDelegate),
+            typeof(Data.Storage.ArgsDefinitions.GetStoredArgsDefinitionsDataAsyncDelegate),
             typeof(FindMethodDelegate),
             typeof(FindParameterDelegate))]
         public ConvertLikelyTypedToTypedTokensDelegate(

@@ -13,7 +13,7 @@ namespace GOG.Delegates.Data.Models.ProductTypes
     public class DeleteGameProductDataAsyncDelegate: DeleteAsyncDelegate<GameProductData>
     {
         [Dependencies(
-            typeof(GOG.Delegates.Data.Storage.ProductTypes.GetListGameProductDataDataFromPathAsyncDelegate),
+            typeof(GOG.Delegates.Data.Storage.ProductTypes.GetStoredListGameProductDataDataAsyncDelegate),
             typeof(ConvertGameProductDataToIndexDelegate),
             typeof(ConfirmGameProductDataContainIdAsyncDelegate))]
         public DeleteGameProductDataAsyncDelegate(

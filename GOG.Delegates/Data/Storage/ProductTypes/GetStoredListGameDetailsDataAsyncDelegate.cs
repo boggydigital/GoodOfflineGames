@@ -8,12 +8,12 @@ using GOG.Models;
 
 namespace GOG.Delegates.Data.Storage.ProductTypes
 {
-    public class GetListGameDetailsDataFromPathAsyncDelegate : GetJSONDataFromPathAsyncDelegate<List<GameDetails>>
+    public class GetStoredListGameDetailsDataAsyncDelegate : GetStoredJSONDataAsyncDelegate<List<GameDetails>>
     {
         [Dependencies(
             typeof(GetListGameDetailsDataAsyncDelegate),
             typeof(GetGameDetailsPathDelegate))]
-        public GetListGameDetailsDataFromPathAsyncDelegate(
+        public GetStoredListGameDetailsDataAsyncDelegate(
             IGetDataAsyncDelegate<List<GameDetails>,string> getListGameDetailsDataAsyncDelegate,
             IGetValueDelegate<string,(string Directory,string Filename)> getGameDetailsPathDelegate) :
             base(

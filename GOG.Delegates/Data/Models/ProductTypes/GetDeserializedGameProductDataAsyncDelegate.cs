@@ -20,7 +20,7 @@ namespace GOG.Delegates.Data.Models.ProductTypes
         public async Task<GameProductData> GetDataAsync(string uri)
         {
             var gogData = await gogDataGetDeserializedDelegate.GetDataAsync(uri);
-            return gogData.GameProductData;
+            return gogData != null ? gogData.GameProductData : null;
         }
     }
 }

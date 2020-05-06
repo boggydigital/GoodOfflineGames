@@ -10,7 +10,7 @@ namespace Tests.TestModels.Dependencies
         public static readonly Dictionary<Type, Type> Map = new Dictionary<Type, Type>()
         {
             {
-                typeof(GetArgsDefinitionsDataFromPathAsyncDelegate),
+                typeof(GetStoredArgsDefinitionsDataAsyncDelegate),
                 typeof(TestArgsDefinitionsDataAsyncDelegate)
             }
         };

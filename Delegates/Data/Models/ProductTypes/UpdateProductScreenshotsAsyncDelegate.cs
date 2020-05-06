@@ -15,7 +15,7 @@ namespace Delegates.Data.Models.ProductTypes
             typeof(DeleteProductScreenshotsAsyncDelegate),
             typeof(ConvertProductScreenshotsToIndexDelegate),
             typeof(ConfirmProductScreenshotsContainIdAsyncDelegate),
-            typeof(Delegates.Data.Storage.ProductTypes.GetListProductScreenshotsDataFromPathAsyncDelegate))]
+            typeof(Delegates.Data.Storage.ProductTypes.GetStoredListProductScreenshotsDataAsyncDelegate))]
         public UpdateProductScreenshotsAsyncDelegate(
             IDeleteAsyncDelegate<ProductScreenshots> deleteAsyncDelegate, 
             IConvertDelegate<ProductScreenshots, long> convertProductToIndexDelegate, 

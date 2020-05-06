@@ -20,7 +20,7 @@ namespace Delegates.Conversions.Requests
         private readonly IConfirmDelegate<(IEnumerable<string>, IEnumerable<string>)> confirmExclusiveStringDelegate;
 
         [Dependencies(
-            typeof(Data.Storage.ArgsDefinitions.GetArgsDefinitionsDataFromPathAsyncDelegate),
+            typeof(Data.Storage.ArgsDefinitions.GetStoredArgsDefinitionsDataAsyncDelegate),
             typeof(FindDependencyDelegate),
             typeof(ConfirmExclusiveStringDelegate))]
         public ConvertRequestsDataToResolvedDependenciesDelegate(

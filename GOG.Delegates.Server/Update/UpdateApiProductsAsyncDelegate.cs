@@ -13,7 +13,7 @@ using Interfaces.Delegates.Values;
 
 namespace GOG.Delegates.Server.Update
 {
-    [RespondsToRequests(Method = "update", Collection = "apiproducts")]
+    [ApiEndpoint(Method = "update", Collection = "apiproducts")]
     public class UpdateApiProductsAsyncDelegate :
         UpdateMasterDetailsAsyncDelegate<ApiProduct, Product>
     {

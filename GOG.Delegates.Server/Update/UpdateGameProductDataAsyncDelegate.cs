@@ -13,14 +13,14 @@ using Interfaces.Delegates.Values;
 
 namespace GOG.Delegates.Server.Update
 {
-    [RespondsToRequests(Method = "update", Collection = "gameproductdata")]
+    [ApiEndpoint(Method = "update", Collection = "gameproductdata")]
     public class UpdateGameProductDataAsyncDelegate :
         UpdateMasterDetailsAsyncDelegate<GameProductData, Product>
     {
         [Dependencies(
             typeof(GetGameProductDataUpdateUriDelegate),
             typeof(ConvertProductToGameProductDataUpdateIdentityDelegate),
-            typeof(UpdateGameProductDataAsyncDelegate),
+            typeof(GOG.Delegates.Data.Models.ProductTypes.UpdateGameProductDataAsyncDelegate),
             typeof(CommitGameProductDataAsyncDelegate),
             typeof(ItemizeAllProductsGameProductDataGapsAsyncDelegate),
             typeof(GetDeserializedGameProductDataAsyncDelegate),

@@ -16,7 +16,7 @@ namespace GOG.Delegates.Data.Models.ProductTypes
             typeof(DeleteGameDetailsAsyncDelegate),
             typeof(ConvertGameDetailsToIndexDelegate),
             typeof(ConfirmGameDetailsContainIdAsyncDelegate),
-            typeof(GOG.Delegates.Data.Storage.ProductTypes.GetListGameDetailsDataFromPathAsyncDelegate))]
+            typeof(GOG.Delegates.Data.Storage.ProductTypes.GetStoredListGameDetailsDataAsyncDelegate))]
         public UpdateGameDetailsAsyncDelegate(
             IDeleteAsyncDelegate<GameDetails> deleteGameDetailsAsyncDelegate, 
             IConvertDelegate<GameDetails, long> convertGameDetailsToIndexDelegate, 

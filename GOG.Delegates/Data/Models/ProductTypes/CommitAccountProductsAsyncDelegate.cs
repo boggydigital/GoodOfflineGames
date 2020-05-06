@@ -11,7 +11,7 @@ namespace GOG.Delegates.Data.Models.ProductTypes
     public class CommitAccountProductsAsyncDelegate : CommitDataAsyncDelegate<AccountProduct>
     {
         [Dependencies(
-            typeof(GOG.Delegates.Data.Storage.ProductTypes.GetListAccountProductDataFromPathAsyncDelegate),
+            typeof(GOG.Delegates.Data.Storage.ProductTypes.GetStoredListAccountProductDataAsyncDelegate),
             typeof(GOG.Delegates.Data.Storage.ProductTypes.PostListAccountProductDataToPathAsyncDelegate),
             typeof(StartDelegate),
             typeof(CompleteDelegate))]

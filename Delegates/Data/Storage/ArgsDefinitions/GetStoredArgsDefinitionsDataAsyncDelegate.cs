@@ -6,12 +6,12 @@ using Models.ArgsDefinitions;
 
 namespace Delegates.Data.Storage.ArgsDefinitions
 {
-    public class GetArgsDefinitionsDataFromPathAsyncDelegate : GetJSONDataFromPathAsyncDelegate<ArgsDefinition>
+    public class GetStoredArgsDefinitionsDataAsyncDelegate : GetStoredJSONDataAsyncDelegate<ArgsDefinition>
     {
         [Dependencies(
             typeof(GetArgsDefinitionsDataAsyncDelegate),
             typeof(GetArgsDefinitionsPathDelegate))]
-        public GetArgsDefinitionsDataFromPathAsyncDelegate(
+        public GetStoredArgsDefinitionsDataAsyncDelegate(
             IGetDataAsyncDelegate<ArgsDefinition, string> getJSONDataAsyncDelegate,
             IGetValueDelegate<string,(string Directory,string Filename)> getPathDelegate) :
             base(getJSONDataAsyncDelegate, getPathDelegate)

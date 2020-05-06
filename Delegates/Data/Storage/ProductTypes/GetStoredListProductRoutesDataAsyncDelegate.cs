@@ -7,12 +7,12 @@ using Models.ProductTypes;
 
 namespace Delegates.Data.Storage.ProductTypes
 {
-    public class GetListProductRoutesDataFromPathAsyncDelegate : GetJSONDataFromPathAsyncDelegate<List<ProductRoutes>>
+    public class GetStoredListProductRoutesDataAsyncDelegate : GetStoredJSONDataAsyncDelegate<List<ProductRoutes>>
     {
         [Dependencies(
             typeof(GetListProductRoutesDataAsyncDelegate),
             typeof(GetProductRoutesPathDelegate))]
-        public GetListProductRoutesDataFromPathAsyncDelegate(
+        public GetStoredListProductRoutesDataAsyncDelegate(
             IGetDataAsyncDelegate<List<ProductRoutes>, string> getListProductRoutesDataAsyncDelegate,
             IGetValueDelegate<string,(string Directory,string Filename)> getProductRoutesPathDelegate) :
             base(

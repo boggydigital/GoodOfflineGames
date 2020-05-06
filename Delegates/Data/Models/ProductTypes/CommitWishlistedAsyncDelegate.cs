@@ -8,7 +8,7 @@ namespace Delegates.Data.Models.ProductTypes
     public class CommitWishlistedAsyncDelegate: CommitDataAsyncDelegate<long>
     {
         [Dependencies(
-            typeof(Delegates.Data.Storage.ProductTypes.GetListWishlistedDataFromPathAsyncDelegate),
+            typeof(Delegates.Data.Storage.ProductTypes.GetStoredListWishlistedDataAsyncDelegate),
             typeof(Delegates.Data.Storage.ProductTypes.PostListWishlistedDataToPathAsyncDelegate),
             typeof(Activities.StartDelegate),
             typeof(Activities.CompleteDelegate))]

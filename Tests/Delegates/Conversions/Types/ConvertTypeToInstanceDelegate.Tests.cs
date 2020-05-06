@@ -59,5 +59,20 @@ namespace Tests.Delegates.Conversions.Types
                 }
             }
         }
+
+        [Theory]
+        [MemberData(nameof(EnumerateTypesWithDependencies))]
+        public void TypesWithDependenciesCanBeInstantiated(params Type[] types)
+        {
+            Assert.NotNull(types);
+            Assert.NotEmpty(types);
+
+            foreach (var type in types)
+            {
+                var typeInstance = 
+                    DelegatesInstances.TestConvertTypeToInstanceDelegate.Convert(type);
+                Assert.NotNull(typeInstance);
+            }
+        }
     }
 }

@@ -12,7 +12,7 @@ using Models.ProductTypes;
 
 namespace GOG.Delegates.Server.Update
 {
-    [RespondsToRequests(Method = "update", Collection = "screenshots")]
+    [ApiEndpoint(Method = "update", Collection = "screenshots")]
     public class UpdateScreenshotsAsyncDelegate : IProcessAsyncDelegate
     {
         private readonly IGetDataAsyncDelegate<Product, long> getProductByIdAsyncDelegate;

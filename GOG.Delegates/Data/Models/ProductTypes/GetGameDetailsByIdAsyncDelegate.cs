@@ -13,7 +13,7 @@ namespace GOG.Delegates.Data.Models.ProductTypes
     public class GetGameDetailsByIdAsyncDelegate: GetDataByIdAsyncDelegate<GameDetails>
     {
         [Dependencies(
-            typeof(GOG.Delegates.Data.Storage.ProductTypes.GetListGameDetailsDataFromPathAsyncDelegate),
+            typeof(GOG.Delegates.Data.Storage.ProductTypes.GetStoredListGameDetailsDataAsyncDelegate),
             typeof(FindGameDetailsDelegate),
             typeof(ConvertGameDetailsToIndexDelegate))]
         public GetGameDetailsByIdAsyncDelegate(

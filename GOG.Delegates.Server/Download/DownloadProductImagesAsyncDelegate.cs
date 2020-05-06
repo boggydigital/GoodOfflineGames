@@ -11,7 +11,7 @@ using Interfaces.Delegates.Itemizations;
 
 namespace GOG.Delegates.Server.Download
 {
-    [RespondsToRequests(Method = "download", Collection = "productimages")]
+    [ApiEndpoint(Method = "download", Collection = "productimages")]
     public class DownloadProductImagesAsyncDelegate : DownloadAsyncDelegate<ProductImage>
     {
         [Dependencies(

@@ -16,7 +16,7 @@ namespace Delegates.Collections.Requests
         private IFindDelegate<Method> findMethodDelegate;
 
         [Dependencies(
-            typeof(GetArgsDefinitionsDataFromPathAsyncDelegate),
+            typeof(GetStoredArgsDefinitionsDataAsyncDelegate),
             typeof(FindMethodDelegate))]
         public SortRequestsMethodsByOrderAsyncDelegate(
             IGetDataAsyncDelegate<ArgsDefinition, string> getArgsDefinitionsDataFromPathAsyncDelegate,

@@ -8,7 +8,7 @@ namespace Delegates.Itemizations.ProductTypes
     public class ItemizeAllUpdatedAsyncDelegate: ItemizeAllDataAsyncDelegate<long>
     {
         [Dependencies(
-            typeof(GetListUpdatedDataFromPathAsyncDelegate))]
+            typeof(GetStoredListUpdatedDataAsyncDelegate))]
         public ItemizeAllUpdatedAsyncDelegate(
             IGetDataAsyncDelegate<List<long>, string> getDataCollectionAsyncDelegate) : base(getDataCollectionAsyncDelegate)
         {

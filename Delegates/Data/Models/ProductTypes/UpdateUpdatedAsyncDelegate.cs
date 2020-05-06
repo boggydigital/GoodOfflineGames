@@ -14,7 +14,7 @@ namespace Delegates.Data.Models.ProductTypes
             typeof(DeleteUpdatedAsyncDelegate),
             typeof(ConvertPassthroughIndexDelegate),
             typeof(ConfirmUpdatedContainIdAsyncDelegate),
-            typeof(Delegates.Data.Storage.ProductTypes.GetListUpdatedDataFromPathAsyncDelegate))]
+            typeof(Delegates.Data.Storage.ProductTypes.GetStoredListUpdatedDataAsyncDelegate))]
         public UpdateUpdatedAsyncDelegate(
             IDeleteAsyncDelegate<long> deleteUpdatedAsyncDelegate, 
             IConvertDelegate<long, long> convertUpdatedToIndexDelegate, 

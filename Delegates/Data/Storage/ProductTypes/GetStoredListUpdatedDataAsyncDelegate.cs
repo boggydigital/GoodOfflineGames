@@ -6,12 +6,12 @@ using Interfaces.Delegates.Values;
 
 namespace Delegates.Data.Storage.ProductTypes
 {
-    public class GetListUpdatedDataFromPathAsyncDelegate : GetJSONDataFromPathAsyncDelegate<List<long>>
+    public class GetStoredListUpdatedDataAsyncDelegate : GetStoredJSONDataAsyncDelegate<List<long>>
     {
         [Dependencies(
             typeof(GetListUpdatedDataAsyncDelegate),
             typeof(GetUpdatedPathDelegate))]
-        public GetListUpdatedDataFromPathAsyncDelegate(
+        public GetStoredListUpdatedDataAsyncDelegate(
             IGetDataAsyncDelegate<List<long>, string> getListUpdatedDataAsyncDelegate,
             IGetValueDelegate<string,(string Directory,string Filename)> getUpdatedPathDelegate) :
             base(

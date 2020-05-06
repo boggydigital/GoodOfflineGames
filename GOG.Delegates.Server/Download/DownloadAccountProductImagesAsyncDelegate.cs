@@ -11,7 +11,7 @@ using Models.ProductTypes;
 
 namespace GOG.Delegates.Server.Download
 {
-    [RespondsToRequests(Method = "download", Collection = "accountproductimages")]
+    [ApiEndpoint(Method = "download", Collection = "accountproductimages")]
     public class
         DownloadAccountProductImagesAsyncDelegate : DownloadAsyncDelegate<AccountProductImage>
     {

@@ -5,6 +5,7 @@ using Interfaces.Delegates.Data;
 using Attributes;
 using GOG.Delegates.Confirmations.ProductTypes;
 using GOG.Delegates.Conversions.ProductTypes;
+using GOG.Delegates.Data.Storage.ProductTypes;
 using Interfaces.Delegates.Confirmations;
 using Interfaces.Delegates.Conversions;
 
@@ -16,7 +17,7 @@ namespace GOG.Delegates.Data.Models.ProductTypes
             typeof(DeleteGameProductDataAsyncDelegate),
             typeof(ConvertGameProductDataToIndexDelegate),
             typeof(ConfirmGameProductDataContainIdAsyncDelegate),
-            typeof(GOG.Delegates.Data.Storage.ProductTypes.GetListGameProductDataDataFromPathAsyncDelegate))]
+            typeof(GetStoredListGameProductDataDataAsyncDelegate))]
         public UpdateGameProductDataAsyncDelegate(
             IDeleteAsyncDelegate<GameProductData> deleteGameProductDataAsyncDelegate, 
             IConvertDelegate<GameProductData, long> convertGameProductDataToIndexDelegate, 

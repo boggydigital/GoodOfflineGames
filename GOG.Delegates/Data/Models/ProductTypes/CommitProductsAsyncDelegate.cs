@@ -8,16 +8,16 @@ using Delegates.Activities;
 
 namespace GOG.Delegates.Data.Models.ProductTypes
 {
-    public class CommitProductsAsyncDelegate : CommitDataAsyncDelegate<ApiProduct>
+    public class CommitProductsAsyncDelegate : CommitDataAsyncDelegate<Product>
     {
         [Dependencies(
-            typeof(GOG.Delegates.Data.Storage.ProductTypes.GetListApiProductDataFromPathAsyncDelegate),
-            typeof(GOG.Delegates.Data.Storage.ProductTypes.PostListApiProductDataToPathAsyncDelegate),
+            typeof(GOG.Delegates.Data.Storage.ProductTypes.GetStoredListProductDataAsyncDelegate),
+            typeof(GOG.Delegates.Data.Storage.ProductTypes.PostListProductDataToPathAsyncDelegate),
             typeof(StartDelegate),
             typeof(CompleteDelegate))]
         public CommitProductsAsyncDelegate(
-            IGetDataAsyncDelegate<List<ApiProduct>, string> getDataAsyncDelegate,
-            IPostDataAsyncDelegate<List<ApiProduct>> postDataAsyncDelegate,
+            IGetDataAsyncDelegate<List<Product>, string> getDataAsyncDelegate,
+            IPostDataAsyncDelegate<List<Product>> postDataAsyncDelegate,
             IStartDelegate startDelegate,
             ICompleteDelegate completeDelegate) :
             base(

@@ -12,7 +12,7 @@ using Interfaces.Delegates.Itemizations;
 namespace GOG.Delegates.Server.Download
 {
     // TODO: productscreenshots or screenshots?
-    [RespondsToRequests(Method = "download", Collection = "productscreenshots")]
+    [ApiEndpoint(Method = "download", Collection = "productscreenshots")]
     public class
         DownloadProductScreenshotsAsyncDelegate : DownloadAsyncDelegate<ProductScreenshots>
     {

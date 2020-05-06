@@ -20,7 +20,7 @@ namespace Delegates.Confirmations.ArgsTokens
         private readonly IFindDelegate<ITitleProperty> findITitlePropertyDelegate;
 
         [Dependencies(
-            typeof(GetArgsDefinitionsDataFromPathAsyncDelegate),
+            typeof(GetStoredArgsDefinitionsDataAsyncDelegate),
             typeof(FindITitlePropertyDelegate))]
         public ConfirmLikelyTokenTypeDelegate(
             IGetDataAsyncDelegate<ArgsDefinition, string> getArgsDefinitionsDataFromPathAsyncDelegate,

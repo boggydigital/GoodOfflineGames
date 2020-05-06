@@ -21,7 +21,7 @@ namespace Delegates.Conversions.Requests
         private readonly IConfirmDelegate<(IEnumerable<string>, IEnumerable<string>)> confirmExlusiveStringDelegate;
 
         [Dependencies(
-            typeof(Data.Storage.ArgsDefinitions.GetArgsDefinitionsDataFromPathAsyncDelegate),
+            typeof(Data.Storage.ArgsDefinitions.GetStoredArgsDefinitionsDataAsyncDelegate),
             typeof(FindMethodDelegate),
             typeof(ConfirmExclusiveStringDelegate))]
         public ConvertRequestsDataToResolvedCollectionsDelegate(

@@ -11,7 +11,7 @@ using Interfaces.Delegates.Itemizations;
 namespace GOG.Delegates.Server.Update
 {
     // TODO: We should generate those files
-    [RespondsToRequests(Method = "update", Collection = "accountproducts")]
+    [ApiEndpoint(Method = "update", Collection = "accountproducts")]
     public class UpdateAccountProductsAsyncDelegate :
         UpdatePageResultAsyncDelegate<AccountProductsPageResult, AccountProduct>
     {

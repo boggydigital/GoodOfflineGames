@@ -14,7 +14,7 @@ using Interfaces.Delegates.Server;
 
 namespace GOG.Delegates.Server.Update
 {
-    [RespondsToRequests(Method = "update", Collection = "updated")]
+    [ApiEndpoint(Method = "update", Collection = "updated")]
     public class UpdateUpdatedAsyncDelegate : IProcessAsyncDelegate
     {
         // private readonly IDataController<AccountProduct> accountProductDataController;

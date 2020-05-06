@@ -34,7 +34,8 @@ namespace GOG.Delegates.Data.Models
 
             var dataCollection = itemizeGogDataDelegate.Itemize(response);
 
-            if (dataCollection == null)
+            if (dataCollection == null ||
+                dataCollection.Count() == 0 )
                 return default(T);
 
             var content = dataCollection.Single();

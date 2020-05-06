@@ -19,7 +19,7 @@ namespace Delegates.Conversions.Requests
         private IIntersectDelegate<string> intersectStringDelegate;
 
         [Dependencies(
-            typeof(Data.Storage.ArgsDefinitions.GetArgsDefinitionsDataFromPathAsyncDelegate),
+            typeof(Data.Storage.ArgsDefinitions.GetStoredArgsDefinitionsDataAsyncDelegate),
             typeof(FindMethodDelegate),
             typeof(Delegates.Collections.System.IntersectStringDelegate))]
         public ConvertRequestsDataToRequestsDelegate(

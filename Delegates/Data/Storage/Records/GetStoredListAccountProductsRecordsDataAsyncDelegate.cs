@@ -8,17 +8,17 @@ using Models.ProductTypes;
 namespace Delegates.Data.Storage.Records
 {
     public class
-        GetListProductRoutesRecordsDataFromPathAsyncDelegate : GetJSONDataFromPathAsyncDelegate<List<ProductRecords>>
+        GetStoredListAccountProductsRecordsDataAsyncDelegate : GetStoredJSONDataAsyncDelegate<List<ProductRecords>>
     {
         [Dependencies(
             typeof(GetListProductRecordsDataAsyncDelegate),
-            typeof(GetProductRoutesRecordsPathDelegate))]
-        public GetListProductRoutesRecordsDataFromPathAsyncDelegate(
+            typeof(GetAccountProductsRecordsPathDelegate))]
+        public GetStoredListAccountProductsRecordsDataAsyncDelegate(
             IGetDataAsyncDelegate<List<ProductRecords>, string> getListProductRecordsDataAsyncDelegate,
-            IGetValueDelegate<string,(string Directory,string Filename)> getProductRoutesRecordsPathDelegate) :
+            IGetValueDelegate<string,(string Directory,string Filename)> getAccountProductsRecordsPathDelegate) :
             base(
                 getListProductRecordsDataAsyncDelegate,
-                getProductRoutesRecordsPathDelegate)
+                getAccountProductsRecordsPathDelegate)
         {
             // ...
         }

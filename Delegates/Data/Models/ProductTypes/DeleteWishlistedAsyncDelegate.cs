@@ -11,7 +11,7 @@ namespace Delegates.Data.Models.ProductTypes
     public class DeleteWishlistedAsyncDelegate : DeleteAsyncDelegate<long>
     {
         [Dependencies(
-            typeof(Delegates.Data.Storage.ProductTypes.GetListWishlistedDataFromPathAsyncDelegate),
+            typeof(Delegates.Data.Storage.ProductTypes.GetStoredListWishlistedDataAsyncDelegate),
             typeof(ConvertPassthroughIndexDelegate),
             typeof(ConfirmWishlistedContainIdAsyncDelegate))]
         public DeleteWishlistedAsyncDelegate(

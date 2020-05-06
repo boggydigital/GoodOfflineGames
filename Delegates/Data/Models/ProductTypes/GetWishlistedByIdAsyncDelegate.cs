@@ -11,7 +11,7 @@ namespace Delegates.Data.Models.ProductTypes
         GetDataByIdAsyncDelegate<long>
     {
         [Dependencies(
-            typeof(Delegates.Data.Storage.ProductTypes.GetListWishlistedDataFromPathAsyncDelegate),
+            typeof(Delegates.Data.Storage.ProductTypes.GetStoredListWishlistedDataAsyncDelegate),
             typeof(Delegates.Collections.ProductTypes.FindWishlistedDelegate),
             typeof(ConvertPassthroughIndexDelegate))]
         public GetWishlistedByIdAsyncDelegate(

@@ -14,7 +14,7 @@ namespace Delegates.Data.Models.ProductTypes
             typeof(DeleteWishlistedAsyncDelegate),
             typeof(ConvertPassthroughIndexDelegate),
             typeof(ConfirmWishlistedContainIdAsyncDelegate),
-            typeof(Delegates.Data.Storage.ProductTypes.GetListWishlistedDataFromPathAsyncDelegate))]
+            typeof(Delegates.Data.Storage.ProductTypes.GetStoredListWishlistedDataAsyncDelegate))]
         public UpdateWishlistedAsyncDelegate(
             IDeleteAsyncDelegate<long> deleteWishlistedAsyncDelegate, 
             IConvertDelegate<long, long> convertWishlistedToIndexDelegate, 

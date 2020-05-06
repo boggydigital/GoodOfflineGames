@@ -8,7 +8,7 @@ using Delegates.Activities;
 
 namespace GOG.Delegates.Server.Authorization
 {
-    [RespondsToRequests(Method = "authorize")]
+    [ApiEndpoint(Method = "authorize")]
     public class AuthorizeAsyncDelegate : IProcessAsyncDelegate
     {
         private readonly IAuthorizeAsyncDelegate authorizeAsyncDelegate;

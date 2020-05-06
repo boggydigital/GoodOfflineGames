@@ -13,7 +13,7 @@ using Models.ProductTypes;
 
 namespace GOG.Delegates.Server.UpdateDownloads
 {
-    [RespondsToRequests(Method = "updatedownloads", Collection = "accountproductimages")]
+    [ApiEndpoint(Method = "updatedownloads", Collection = "accountproductimages")]
     public class UpdateAccountProductImagesDownloadsAsyncDelegate :
         UpdateDownloadsAsyncDelegate<AccountProductImage>
     {

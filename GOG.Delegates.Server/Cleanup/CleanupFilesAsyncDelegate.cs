@@ -12,7 +12,7 @@ using Interfaces.Delegates.Itemizations;
 
 namespace GOG.Delegates.Server.Cleanup
 {
-    [RespondsToRequests(Method = "cleanup", Collection = "files")]
+    [ApiEndpoint(Method = "cleanup", Collection = "files")]
     public class CleanupFilesAsyncDelegate : CleanupAsyncDelegate<ProductFile>
     {
         [Dependencies(

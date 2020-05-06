@@ -12,7 +12,7 @@ namespace Delegates.Data.Models.ProductTypes
     public class DeleteProductRoutesAsyncDelegate : DeleteAsyncDelegate<ProductRoutes>
     {
         [Dependencies(
-            typeof(Delegates.Data.Storage.ProductTypes.GetListProductRoutesDataFromPathAsyncDelegate),
+            typeof(Delegates.Data.Storage.ProductTypes.GetStoredListProductRoutesDataAsyncDelegate),
             typeof(ConvertProductRoutesToIndexDelegate),
             typeof(ConfirmProductRoutesContainIdAsyncDelegate))]
         public DeleteProductRoutesAsyncDelegate(

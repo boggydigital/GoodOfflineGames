@@ -9,7 +9,7 @@ namespace Delegates.Data.Models.ProductTypes
     public class CommitProductRoutesAsyncDelegate: CommitDataAsyncDelegate<ProductRoutes>
     {
         [Dependencies(
-            typeof(Delegates.Data.Storage.ProductTypes.GetListProductRoutesDataFromPathAsyncDelegate),
+            typeof(Delegates.Data.Storage.ProductTypes.GetStoredListProductRoutesDataAsyncDelegate),
             typeof(Delegates.Data.Storage.ProductTypes.PostListProductRoutesDataToPathAsyncDelegate),
             typeof(Activities.StartDelegate),
             typeof(Activities.CompleteDelegate))]

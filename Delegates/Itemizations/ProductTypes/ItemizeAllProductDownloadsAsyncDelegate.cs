@@ -9,7 +9,7 @@ namespace Delegates.Itemizations.ProductTypes
     public class ItemizeAllProductDownloadsAsyncDelegate: ItemizeAllDataAsyncDelegate<ProductDownloads>
     {
         [Dependencies(
-            typeof(GetListProductDownloadsDataFromPathAsyncDelegate))]
+            typeof(GetStoredListProductDownloadsDataAsyncDelegate))]
         public ItemizeAllProductDownloadsAsyncDelegate(
             IGetDataAsyncDelegate<List<ProductDownloads>, string> getProductDownloadsAsyncDelegate) : 
             base(getProductDownloadsAsyncDelegate)

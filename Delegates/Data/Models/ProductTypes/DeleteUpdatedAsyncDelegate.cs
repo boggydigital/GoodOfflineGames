@@ -11,7 +11,7 @@ namespace Delegates.Data.Models.ProductTypes
     public class DeleteUpdatedAsyncDelegate : DeleteAsyncDelegate<long>
     {
         [Dependencies(
-            typeof(Delegates.Data.Storage.ProductTypes.GetListUpdatedDataFromPathAsyncDelegate),
+            typeof(Delegates.Data.Storage.ProductTypes.GetStoredListUpdatedDataAsyncDelegate),
             typeof(ConvertPassthroughIndexDelegate),
             typeof(ConfirmUpdatedContainIdAsyncDelegate))]
         public DeleteUpdatedAsyncDelegate(

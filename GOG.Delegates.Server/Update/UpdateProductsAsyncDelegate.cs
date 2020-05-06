@@ -7,24 +7,25 @@ using GOG.Models;
 using Interfaces.Delegates.Activities;
 using Interfaces.Delegates.Data;
 using Interfaces.Delegates.Itemizations;
+using GOG.Delegates.Data.Models.ProductTypes;
 
 namespace GOG.Delegates.Server.Update
 {
     // TODO: We should generate those files
-    [RespondsToRequests(Method = "update", Collection = "products")]
+    [ApiEndpoint(Method = "update", Collection = "products")]
     public class UpdateProductsAsyncDelegate :
         UpdatePageResultAsyncDelegate<ProductsPageResult, Product>
     {
         [Dependencies(
             typeof(GetProductsPageResultsAsyncDelegate),
             typeof(ItemizeProductsPageResultProductsDelegate),
-            typeof(GOG.Delegates.Data.Models.ProductTypes.UpdateProductsAsyncDelegate),
-            typeof(GOG.Delegates.Data.Models.ProductTypes.CommitProductsAsyncDelegate),
+            typeof(UpdateProductAsyncDelegate),
+            typeof(CommitProductsAsyncDelegate),
             typeof(StartDelegate),
             typeof(SetProgressDelegate),
             typeof(CompleteDelegate))]
         public UpdateProductsAsyncDelegate(
-            IGetDataAsyncDelegate<IList<ProductsPageResult>, string> 
+            IGetDataAsyncDelegate<IList<ProductsPageResult>, string>
                 getProductsPageResultsAsyncDelegate,
             IItemizeDelegate<IList<ProductsPageResult>, Product> itemizeProductsPageResultsDelegate,
             IUpdateAsyncDelegate<Product> updateProductsAsyncDelegate,

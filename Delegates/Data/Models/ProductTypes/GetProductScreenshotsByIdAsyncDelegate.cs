@@ -12,7 +12,7 @@ namespace Delegates.Data.Models.ProductTypes
         GetDataByIdAsyncDelegate<ProductScreenshots>
     {
         [Dependencies(
-            typeof(Delegates.Data.Storage.ProductTypes.GetListProductScreenshotsDataFromPathAsyncDelegate),
+            typeof(Delegates.Data.Storage.ProductTypes.GetStoredListProductScreenshotsDataAsyncDelegate),
             typeof(Delegates.Collections.ProductTypes.FindProductScreenshotsDelegate),
             typeof(ConvertProductScreenshotsToIndexDelegate))]
         public GetProductScreenshotsByIdAsyncDelegate(

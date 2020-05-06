@@ -22,7 +22,7 @@ using Interfaces.Delegates.Values;
 
 namespace GOG.Delegates.Server.Validate
 {
-    [RespondsToRequests(Method = "validate", Collection = "productfiles")]
+    [ApiEndpoint(Method = "validate", Collection = "productfiles")]
     public class ValidateProductFilesAsyncDelegate : IProcessAsyncDelegate
     {
         private readonly IGetValueDelegate<string,string> productFileDirectoryDelegate;
