@@ -10,9 +10,6 @@ namespace vangogh.Console
     {
         private static async Task Main(string[] args)
         {
-            // DEBUG
-            args = new string[] {"update", "products"};
-
             var convertTypeToDependenciesConstructorInfoDelegate =
                 new ConvertTypeToDependenciesConstructorInfoDelegate();
 
