@@ -1,12 +1,9 @@
-﻿using System.Threading.Tasks;
-using Delegates.Conversions.Requests;
-using Delegates.Conversions.Types;
-using GOG.Delegates.Server.Update;
-using Interfaces.Delegates.Server;
+﻿using System;
+using System.Threading.Tasks;
 using GOG.Delegates.Conversions.Requests;
-using GOG.Delegates.Itemizations.Types;
-using GOG.Delegates.Itemizations.Types.Attributes;
-using GOG.Delegates.Data.Storage.ProductTypes;
+using GOG.Delegates.Server.Interfaces;
+using SecretSauce.Delegates.Conversions.Requests;
+using SecretSauce.Delegates.Conversions.Types;
 
 namespace vangogh.Console
 {
@@ -22,7 +19,7 @@ namespace vangogh.Console
             // var getStoredListProductsDataAsyncDelegate = convertTypeToInstanceDelegate.Convert(
             //         typeof(GetStoredListProductDataAsyncDelegate))
             //     as GetStoredListProductDataAsyncDelegate;
-            
+
             // var products =  await getStoredListProductsDataAsyncDelegate.GetDataAsync();
 
             // foreach (var product in products)
@@ -31,7 +28,7 @@ namespace vangogh.Console
             //     System.Console.WriteLine($"{product.Id},{product.Title},{product.ReleaseDate},{product.Type}");
             // }
             // return;
-            
+
             var convertArgsToRequestsDelegate = convertTypeToInstanceDelegate.Convert(
                     typeof(ConvertArgsToRequestsDelegate))
                 as ConvertArgsToRequestsDelegate;
@@ -39,19 +36,19 @@ namespace vangogh.Console
             var convertRequestToProcessDelegateTypeDelegate = convertTypeToInstanceDelegate.Convert(
                     typeof(ConvertRequestToProcessDelegateTypeDelegate))
                 as ConvertRequestToProcessDelegateTypeDelegate;
-            
+
             await foreach (var request in convertArgsToRequestsDelegate.ConvertAsync(args))
             {
                 var processDelegateType = convertRequestToProcessDelegateTypeDelegate.Convert(request);
 
                 if (processDelegateType == null)
-                    throw new System.InvalidOperationException(
+                    throw new InvalidOperationException(
                         $"No respond delegate registered for request: {request.Method} {request.Collection}");
-                
+
                 var processAsyncDelegate = convertTypeToInstanceDelegate.Convert(
                         processDelegateType)
                     as IProcessAsyncDelegate;
-                
+
                 await processAsyncDelegate.ProcessAsync(request.Parameters);
             }
 

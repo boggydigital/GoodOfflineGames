@@ -13,9 +13,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Delegates\Delegates.csproj" />
-    <ProjectReference Include="..\GOG.Delegates.Server\GOG.Delegates.Server.csproj" />
-    <ProjectReference Include="..\GOG.Delegates\GOG.Delegates.csproj" />
+    <ProjectReference Include="..\SecretSauce.Delegates.Collections.Requests\SecretSauce.Delegates.Collections.Requests.csproj" />
+    <ProjectReference Include="..\SecretSauce.Delegates.Confirmations.ArgsTokens\SecretSauce.Delegates.Confirmations.ArgsTokens.csproj" />
+    <ProjectReference Include="..\SecretSauce.Delegates.Conversions.ArgsTokens\SecretSauce.Delegates.Conversions.ArgsTokens.csproj" />
+    <ProjectReference Include="..\SecretSauce.Delegates.Conversions.Requests\SecretSauce.Delegates.Conversions.Requests.csproj" />
+    <ProjectReference Include="..\SecretSauce.Delegates.Conversions.Types\SecretSauce.Delegates.Conversions.Types.csproj" />
+    <ProjectReference Include="..\SecretSauce.Delegates.Itemizations.Types.Attributes\SecretSauce.Delegates.Itemizations.Types.Attributes.csproj" />
   </ItemGroup>
 
 </Project>

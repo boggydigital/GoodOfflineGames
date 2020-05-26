@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SecretSauce.Attributes\SecretSauce.Attributes.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Collections.System\SecretSauce.Delegates.Collections.System.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Confirmations\SecretSauce.Delegates.Confirmations.csproj" />
+    </ItemGroup>
+
+</Project>

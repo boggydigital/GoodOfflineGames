@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SecretSauce.Attributes\SecretSauce.Attributes.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Activities.Interfaces\SecretSauce.Delegates.Activities.Interfaces.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Activities\SecretSauce.Delegates.Activities.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Conversions.Interfaces\SecretSauce.Delegates.Conversions.Interfaces.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Conversions.Uris\SecretSauce.Delegates.Conversions.Uris.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Data.Console\SecretSauce.Delegates.Data.Console.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Data.Interfaces\SecretSauce.Delegates.Data.Interfaces.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Data.Network\SecretSauce.Delegates.Data.Network.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Itemizations.HtmlAttributes\SecretSauce.Delegates.Itemizations.HtmlAttributes.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Itemizations.Interfaces\SecretSauce.Delegates.Itemizations.Interfaces.csproj" />
+    </ItemGroup>
+
+</Project>

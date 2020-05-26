@@ -5,11 +5,6 @@ namespace GOG.Models
     public class ProductFileDownloadManifest :
         ITitleProperty
     {
-        public long Id { get; }
-        public string Title { get; }
-        public string Source { get; }
-        public string Destination { get; }
-
         public ProductFileDownloadManifest(
             long id,
             string title,
@@ -21,5 +16,10 @@ namespace GOG.Models
             Source = source;
             Destination = destination;
         }
+
+        public long Id { get; }
+        public string Source { get; }
+        public string Destination { get; }
+        public string Title { get; }
     }
 }

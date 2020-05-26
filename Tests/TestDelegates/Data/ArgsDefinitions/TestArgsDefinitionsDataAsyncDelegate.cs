@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
-using Interfaces.Delegates.Data;
 using Models.ArgsDefinitions;
+using SecretSauce.Delegates.Data.Interfaces;
+using Tests.TestModels.ArgsDefinitions;
 
 namespace Tests.TestDelegates.Data.ArgsDefinitions
 {
@@ -8,10 +9,7 @@ namespace Tests.TestDelegates.Data.ArgsDefinitions
     {
         public async Task<ArgsDefinition> GetDataAsync(string uri = null)
         {
-            return await Task.Run(() =>
-            {
-                return TestModels.ArgsDefinitions.ReferenceArgsDefinition.ArgsDefinition;
-            });
+            return await Task.Run(() => { return ReferenceArgsDefinition.ArgsDefinition; });
         }
     }
 }

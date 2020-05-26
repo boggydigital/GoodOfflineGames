@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\GOG.Delegates.Authorization.Interfaces\GOG.Delegates.Authorization.Interfaces.csproj" />
+      <ProjectReference Include="..\GOG.Delegates.Confirmations.Authorization\GOG.Delegates.Confirmations.Authorization.csproj" />
+      <ProjectReference Include="..\GOG.Delegates.Data.Authorization\GOG.Delegates.Data.Authorization.csproj" />
+      <ProjectReference Include="..\GOG.Delegates\GOG.Delegates.csproj" />
+      <ProjectReference Include="..\SecretSauce.Attributes\SecretSauce.Attributes.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Activities.Interfaces\SecretSauce.Delegates.Activities.Interfaces.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Activities\SecretSauce.Delegates.Activities.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Confirmations.Interfaces\SecretSauce.Delegates.Confirmations.Interfaces.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Data.Interfaces\SecretSauce.Delegates.Data.Interfaces.csproj" />
+    </ItemGroup>
+
+</Project>

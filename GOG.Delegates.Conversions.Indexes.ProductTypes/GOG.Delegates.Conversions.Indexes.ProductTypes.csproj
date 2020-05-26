@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\GOG.Models\GOG.Models.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Conversions.Indexes.ProductTypes\SecretSauce.Delegates.Conversions.Indexes.ProductTypes.csproj" />
+    </ItemGroup>
+
+</Project>

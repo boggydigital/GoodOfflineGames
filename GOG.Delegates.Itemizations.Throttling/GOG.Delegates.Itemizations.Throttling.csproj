@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Models\Models.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Itemizations.Interfaces\SecretSauce.Delegates.Itemizations.Interfaces.csproj" />
+    </ItemGroup>
+
+</Project>

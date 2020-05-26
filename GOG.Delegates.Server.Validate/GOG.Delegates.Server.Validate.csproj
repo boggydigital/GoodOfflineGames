@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\GOG.Delegates.Data.Models.ProductTypes\GOG.Delegates.Data.Models.ProductTypes.csproj" />
+      <ProjectReference Include="..\GOG.Delegates.Itemizations.ProductTypes\GOG.Delegates.Itemizations.ProductTypes.csproj" />
+      <ProjectReference Include="..\GOG.Delegates.Server.Interfaces\GOG.Delegates.Server.Interfaces.csproj" />
+      <ProjectReference Include="..\GOG.Models\GOG.Models.csproj" />
+      <ProjectReference Include="..\SecretSauce.Attributes\SecretSauce.Attributes.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Activities.Interfaces\SecretSauce.Delegates.Activities.Interfaces.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Confirmations.Interfaces\SecretSauce.Delegates.Confirmations.Interfaces.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Confirmations.Validation\SecretSauce.Delegates.Confirmations.Validation.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Conversions.Interfaces\SecretSauce.Delegates.Conversions.Interfaces.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Conversions.Uris\SecretSauce.Delegates.Conversions.Uris.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Data.Interfaces\SecretSauce.Delegates.Data.Interfaces.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Data.Models.ProductTypes\SecretSauce.Delegates.Data.Models.ProductTypes.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Itemizations.Interfaces\SecretSauce.Delegates.Itemizations.Interfaces.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Itemizations.ProductTypes\SecretSauce.Delegates.Itemizations.ProductTypes.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Values.Directories.ProductTypes\SecretSauce.Delegates.Values.Directories.ProductTypes.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Values.Filenames\SecretSauce.Delegates.Values.Filenames.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Values.Interfaces\SecretSauce.Delegates.Values.Interfaces.csproj" />
+    </ItemGroup>
+
+</Project>

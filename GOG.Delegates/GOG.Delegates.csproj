@@ -8,8 +8,15 @@
     <ProjectReference Include="..\GOG.Interfaces\GOG.Interfaces.csproj" />
     <ProjectReference Include="..\GOG.Models\GOG.Models.csproj" />
     <ProjectReference Include="..\Interfaces\Interfaces.csproj" />
-    <ProjectReference Include="..\Delegates\Delegates.csproj" />
-    <ProjectReference Include="..\Attributes\Attributes.csproj" />
+    <ProjectReference Include="..\SecretSauce.Attributes\SecretSauce.Attributes.csproj" />
+    <ProjectReference Include="..\SecretSauce.Delegates.Activities\SecretSauce.Delegates.Activities.csproj" />
+    <ProjectReference Include="..\SecretSauce.Delegates.Confirmations\SecretSauce.Delegates.Confirmations.csproj" />
+    <ProjectReference Include="..\SecretSauce.Delegates.Data\SecretSauce.Delegates.Data.csproj" />
+    <ProjectReference Include="..\SecretSauce.Delegates\SecretSauce.Delegates.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\Storage\ProductTypes" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\GOG.Delegates.Data.Models.ProductTypes\GOG.Delegates.Data.Models.ProductTypes.csproj" />
+      <ProjectReference Include="..\GOG.Delegates.Data.Storage.ProductTypes\GOG.Delegates.Data.Storage.ProductTypes.csproj" />
+      <ProjectReference Include="..\GOG.Delegates.Values.Images.ProductTypes\GOG.Delegates.Values.Images.ProductTypes.csproj" />
+      <ProjectReference Include="..\GOG.Models\GOG.Models.csproj" />
+      <ProjectReference Include="..\SecretSauce.Attributes\SecretSauce.Attributes.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Conversions.Uris\SecretSauce.Delegates.Conversions.Uris.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="SecretSauce.Delegates.Itemizations.ProductTypes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\SecretSauce.Delegates.Itemizations.ProductTypes\bin\Debug\netstandard2.1\SecretSauce.Delegates.Itemizations.ProductTypes.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+</Project>

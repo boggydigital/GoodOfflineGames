@@ -36,7 +36,7 @@ namespace Models.QueryParameters
         public static string Brand = "brand";
 
         // LoginAuthenticate
-        private static string Login = "login";
+        private static readonly string Login = "login";
         public static string LoginUsername = Login + "[username]";
         public static string LoginPassword = Login + "[password]";
         public static string LoginId = Login + "[id]";
@@ -44,8 +44,8 @@ namespace Models.QueryParameters
         public static string LoginToken = Login + "[_token]";
 
         // SecondStepAuthentication
-        private static string SecondStepAuthentication = "second_step_authentication";
-        private static string SecondStepAuthenticationTokenLetters = SecondStepAuthentication + "[token]";
+        private static readonly string SecondStepAuthentication = "second_step_authentication";
+        private static readonly string SecondStepAuthenticationTokenLetters = SecondStepAuthentication + "[token]";
         public static string SecondStepAuthenticationTokenLetter1 = SecondStepAuthenticationTokenLetters + "[letter_1]";
         public static string SecondStepAuthenticationTokenLetter2 = SecondStepAuthenticationTokenLetters + "[letter_2]";
         public static string SecondStepAuthenticationTokenLetter3 = SecondStepAuthenticationTokenLetters + "[letter_3]";

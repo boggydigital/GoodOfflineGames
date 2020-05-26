@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\GOG.Delegates.Conversions.UpdateIdentity.ProductTypes\GOG.Delegates.Conversions.UpdateIdentity.ProductTypes.csproj" />
+      <ProjectReference Include="..\GOG.Delegates.Data.Models.ProductTypes\GOG.Delegates.Data.Models.ProductTypes.csproj" />
+      <ProjectReference Include="..\GOG.Delegates.Itemizations.MasterDetail\GOG.Delegates.Itemizations.MasterDetail.csproj" />
+      <ProjectReference Include="..\GOG.Delegates.Itemizations.ProductTypes\GOG.Delegates.Itemizations.ProductTypes.csproj" />
+      <ProjectReference Include="..\GOG.Delegates.Server.Interfaces\GOG.Delegates.Server.Interfaces.csproj" />
+      <ProjectReference Include="..\GOG.Models\GOG.Models.csproj" />
+      <ProjectReference Include="..\SecretSauce.Attributes\SecretSauce.Attributes.csproj" />
+    </ItemGroup>
+
+</Project>

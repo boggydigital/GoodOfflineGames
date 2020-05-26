@@ -54,7 +54,7 @@
                 public static string AjaxFiltered = Roots.Website + "/games/ajax/filtered";
             }
 
-            public static class GameProductData
+            public static class ProductPage
             {
                 public static string ProductTemplate = Roots.Website + "{0}";
             }

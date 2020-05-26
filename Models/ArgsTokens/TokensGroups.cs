@@ -13,11 +13,11 @@ namespace Models.ArgsTokens
         // If the current group doesn't contain expected tokens we can saely advance to the next groups
 
         public static IDictionary<Groups, Tokens[]> ParsingExpectations =
-            new Dictionary<Groups, Tokens[]>()
+            new Dictionary<Groups, Tokens[]>
             {
                 {
                     Groups.Methods,
-                    new Tokens[]
+                    new[]
                     {
                         Tokens.LikelyMethodsAbbrevation,
                         Tokens.MethodsSet,
@@ -26,14 +26,14 @@ namespace Models.ArgsTokens
                 },
                 {
                     Groups.Collections,
-                    new Tokens[]
+                    new[]
                     {
                         Tokens.CollectionTitle
                     }
                 },
                 {
                     Groups.ParametersValues,
-                    new Tokens[]
+                    new[]
                     {
                         Tokens.ParameterTitle,
                         Tokens.LikelyParameterValue

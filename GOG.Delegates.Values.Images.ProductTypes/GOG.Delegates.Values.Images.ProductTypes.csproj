@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <RootNamespace>GOG.Delegates.Values.Images</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\GOG.Models\GOG.Models.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Values.Interfaces\SecretSauce.Delegates.Values.Interfaces.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\GOG.Delegates.Collections.ProductTypes\GOG.Delegates.Collections.ProductTypes.csproj" />
+      <ProjectReference Include="..\GOG.Delegates.Confirmations.Languages.ProductTypes\GOG.Delegates.Confirmations.Languages.ProductTypes.csproj" />
+      <ProjectReference Include="..\GOG.Delegates.Conversions.Indexes.ProductTypes\GOG.Delegates.Conversions.Indexes.ProductTypes.csproj" />
+      <ProjectReference Include="..\GOG.Delegates.Conversions.ProductTypes\GOG.Delegates.Conversions.ProductTypes.csproj" />
+      <ProjectReference Include="..\GOG.Delegates.Data.Models\GOG.Delegates.Data.Models.csproj" />
+      <ProjectReference Include="..\GOG.Delegates.Data.Network\GOG.Delegates.Data.Network.csproj" />
+      <ProjectReference Include="..\GOG.Delegates.Data.Storage.ProductTypes\GOG.Delegates.Data.Storage.ProductTypes.csproj" />
+      <ProjectReference Include="..\GOG.Delegates.Itemizations.ProductTypes.GameDetails\GOG.Delegates.Itemizations.ProductTypes.GameDetails.csproj" />
+      <ProjectReference Include="..\GOG.Delegates.Itemizations.ProductTypes.Screenshots\GOG.Delegates.Itemizations.ProductTypes.Screenshots.csproj" />
+      <ProjectReference Include="..\GOG.Models\GOG.Models.csproj" />
+      <ProjectReference Include="..\SecretSauce.Attributes\SecretSauce.Attributes.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Activities\SecretSauce.Delegates.Activities.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Conversions.Languages\SecretSauce.Delegates.Conversions.Languages.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Conversions.Uris\SecretSauce.Delegates.Conversions.Uris.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Data.Models\SecretSauce.Delegates.Data.Models.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Values.QueryParameters.ProductTypes\SecretSauce.Delegates.Values.QueryParameters.ProductTypes.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Values.Uris.ProductTypes\SecretSauce.Delegates.Values.Uris.ProductTypes.csproj" />
+    </ItemGroup>
+
+</Project>

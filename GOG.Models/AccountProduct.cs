@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
-using ProtoBuf;
 using Models.ProductTypes;
+using ProtoBuf;
 
 namespace GOG.Models
 {

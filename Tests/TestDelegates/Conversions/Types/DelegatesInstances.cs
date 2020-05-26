@@ -1,7 +1,8 @@
 using System;
 using System.Reflection;
-using Delegates.Conversions.Types;
-using Interfaces.Delegates.Conversions;
+using SecretSauce.Delegates.Conversions.Interfaces;
+using SecretSauce.Delegates.Conversions.Types;
+using Tests.TestModels.Dependencies;
 
 namespace Tests.TestDelegates.Conversions.Types
 {
@@ -12,7 +13,7 @@ namespace Tests.TestDelegates.Conversions.Types
 
         public static IConvertDelegate<ConstructorInfo, Type[]> TestConvertConstructorInfoToDependenciesTypesDelegate =
             new ConvertConstructorInfoToDependenciesTypesDelegate(
-                TestModels.Dependencies.TestContextReplacements.Map);
+                TestContextReplacements.Map);
 
         public static IConvertDelegate<Type, object> TestConvertTypeToInstanceDelegate =
             new ConvertTypeToInstanceDelegate(

@@ -4,7 +4,7 @@ namespace Models.Languages
 {
     public static class Codes
     {
-        public static Dictionary<string, string> LanguageCodes = new Dictionary<string, string>()
+        public static Dictionary<string, string> LanguageCodes = new Dictionary<string, string>
         {
             // extracted from https://www.gog.com/account
             {"en", "english"},

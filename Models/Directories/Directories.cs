@@ -18,7 +18,6 @@ namespace Models.Directories
         public static string Products = "products";
         public static string AccountProducts = "accountProducts";
         public static string GameDetails = "gameDetails";
-        public static string GameProductData = "gameProductData";
         public static string ApiProducts = "apiProducts";
         public static string ProductDownloads = "productDownloads";
         public static string ProductRoutes = "productRoutes";

@@ -50,7 +50,6 @@
             "desc": "",
             "collections": [
                 "products",
-                "gameproductdata",
                 "accountproducts",
                 "apiproducts",
                 "gamedetails",
@@ -100,7 +99,6 @@
             "order": 20,
             "collections": [
                 "products",
-                "gameproductdata",
                 "accountproducts",
                 "apiproducts",
                 "gamedetails",
@@ -142,10 +140,6 @@
         {
             "title": "products",
             "desc": "Products"
-        },
-        {
-            "title": "gameproductdata",
-            "desc": "Game prodcut data"
         },
         {
             "title": "accountproducts",

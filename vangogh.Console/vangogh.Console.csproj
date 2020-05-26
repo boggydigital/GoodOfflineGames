@@ -11,12 +11,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Delegates\Delegates.csproj" />
+    <ProjectReference Include="..\GOG.Delegates.Conversions.Requests\GOG.Delegates.Conversions.Requests.csproj" />
+    <ProjectReference Include="..\GOG.Delegates.Server.Interfaces\GOG.Delegates.Server.Interfaces.csproj" />
     <ProjectReference Include="..\GOG.Delegates.Server\GOG.Delegates.Server.csproj" />
     <ProjectReference Include="..\GOG.Delegates\GOG.Delegates.csproj" />
     <ProjectReference Include="..\GOG.Models\GOG.Models.csproj" />
     <ProjectReference Include="..\Interfaces\Interfaces.csproj" />
     <ProjectReference Include="..\Models\Models.csproj" />
+    <ProjectReference Include="..\SecretSauce.Delegates.Conversions.Requests\SecretSauce.Delegates.Conversions.Requests.csproj" />
+    <ProjectReference Include="..\SecretSauce.Delegates.Conversions.Types\SecretSauce.Delegates.Conversions.Types.csproj" />
   </ItemGroup>
 
   <ItemGroup>

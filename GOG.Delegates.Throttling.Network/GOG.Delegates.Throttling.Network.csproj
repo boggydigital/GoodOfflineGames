@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\GOG.Delegates.Itemizations.Throttling\GOG.Delegates.Itemizations.Throttling.csproj" />
+      <ProjectReference Include="..\GOG.Delegates\GOG.Delegates.csproj" />
+      <ProjectReference Include="..\SecretSauce.Attributes\SecretSauce.Attributes.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Collections.Interfaces\SecretSauce.Delegates.Collections.Interfaces.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Collections.System\SecretSauce.Delegates.Collections.System.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Itemizations.Interfaces\SecretSauce.Delegates.Itemizations.Interfaces.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Throttling.Interfaces\SecretSauce.Delegates.Throttling.Interfaces.csproj" />
+      <ProjectReference Include="..\SecretSauce.Delegates.Throttling\SecretSauce.Delegates.Throttling.csproj" />
+    </ItemGroup>
+
+</Project>
